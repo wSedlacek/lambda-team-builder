@@ -16,6 +16,12 @@ export const Item = (props: ItemProps) => {
       <Typography variant='h5' component='h2'>
         {props.member.name}
       </Typography>
+      <Typography gutterBottom variant='subtitle1' component='h3'>
+        {props.member.role}
+      </Typography>
+      <Typography variant='subtitle2' component='h4'>
+        {props.member.email}
+      </Typography>
     </Card>
   );
 };
