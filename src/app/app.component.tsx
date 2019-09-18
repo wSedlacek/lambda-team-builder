@@ -17,9 +17,13 @@ export const App = () => {
 
   return (
     <div>
-      <Add handleSubmit={member => TeamService.addMember(member)} />
+      <Add handleAdd={member => TeamService.addMember(member)} />
       {members.map(member => (
-        <Item member={member} key={member.id} />
+        <Item
+          key={member.id}
+          member={member}
+          handleEdit={(id, member) => TeamService.editMember(id, member)}
+        />
       ))}
     </div>
   );

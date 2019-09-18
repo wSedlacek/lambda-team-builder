@@ -9,6 +9,13 @@ export class TeamService {
     this.members.next([...this.members.getValue(), member]);
   }
 
+  public static editMember(id: string | undefined, member: TeamMember) {
+    const members = this.members.getValue();
+    const indexToEdit = members.findIndex(member => member.id === id);
+    members[indexToEdit] = member;
+    this.members.next([...members]);
+  }
+
   public static subscribe(setMembers: (member: TeamMember[]) => void) {
     return this.members.subscribe(setMembers);
   }
