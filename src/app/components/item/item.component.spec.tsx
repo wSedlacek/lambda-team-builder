@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 
 import { Item } from './item.component';
 
-it('shows member dave.', () => {
+it('shows member dave', () => {
   const dave = {
     id: '0',
     name: 'Dave',
