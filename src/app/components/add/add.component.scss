@@ -1,0 +1,15 @@
+.Add {
+  width: 80%;
+  margin: 1rem auto;
+  padding: 1rem;
+
+  form {
+    display: flex;
+    align-items: center;
+
+    .MuiTextField-root {
+      flex: 1 1 auto;
+      margin-right: 1rem;
+    }
+  }
+}
