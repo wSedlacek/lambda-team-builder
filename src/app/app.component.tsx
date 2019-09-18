@@ -18,6 +18,7 @@ export const App = () => {
   return (
     <div>
       <Add handleAdd={member => TeamService.addMember(member)} />
+      <h1 className='title'> Team Members </h1>
       {members.map(member => (
         <Item
           key={member.id}
