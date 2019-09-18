@@ -3,7 +3,12 @@ import { render } from '@testing-library/react';
 
 import { App } from './app.component';
 
-it('Renders without crashing', () => {
+it('renders without crashing', () => {
   const { baseElement } = render(<App />);
   expect(baseElement).toBeInTheDocument();
+});
+
+it('has items', () => {
+  const { baseElement } = render(<App />);
+  expect(baseElement.querySelector('.Item')).toBeInTheDocument();
 });
