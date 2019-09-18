@@ -10,6 +10,6 @@ export class TeamService {
   }
 
   public static subscribe(setMembers: (member: TeamMember[]) => void) {
-    this.members.subscribe(setMembers);
+    return this.members.subscribe(setMembers);
   }
 }
